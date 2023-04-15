@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkoutActivity">
+
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Your Workout Session"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#412CFD"
+        android:text="Total to complete:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle" />
+
+    <TextView
+        android:id="@+id/totalSetText"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="25dp"
+        android:text="No. of sets:"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalText" />
+
+    <TextView
+        android:id="@+id/totalSetNumber"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toEndOf="@+id/totalSetText"
+        app:layout_constraintTop_toBottomOf="@+id/totalText" />
+
+    <TextView
+        android:id="@+id/totalWorkoutText"
+        android:layout_width="170dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="35dp"
+        android:text="Workout per set (secs):"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/totalSetText" />
+
+    <TextView
+        android:id="@+id/totalWorkoutSecs"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="0dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/totalSetText"
+        app:layout_constraintTop_toBottomOf="@+id/totalSetText" />
+
+    <TextView
+        android:id="@+id/totalRestText"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="35dp"
+        android:text="Rest per set (secs):"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/totalWorkoutText" />
+
+    <TextView
+        android:id="@+id/totalRestSecs"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="0dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/totalWorkoutText"
+        app:layout_constraintTop_toBottomOf="@+id/totalWorkoutText" />
+
+    <TextView
+        android:id="@+id/remainingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="REMAINING"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalWorkoutText" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="287dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remainingText" />
+
+    <TextView
+        android:id="@+id/mySets"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
+        android:text="SETS"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#9603FF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/myActivity"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="60dp"
+        android:text="ACTIVITY"
+        android:textColor="#717171"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/mySets"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/setsCountdown"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:textColor="#9603FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mySets" />
+
+    <TextView
+        android:id="@+id/activityCountdown"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="70dp"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:textColor="#717171"
+        app:layout_constraintStart_toEndOf="@+id/setsCountdown"
+        app:layout_constraintTop_toBottomOf="@+id/myActivity" />
+
+    <Button
+        android:id="@+id/beginButton"
+        android:layout_width="160dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="100dp"
+        android:text="BEGIN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="beginWorkoutClicked"/>
+
+    <Button
+        android:id="@+id/goBackButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:onClick="goBackClicked"
+        android:text="Go Back"
+        android:textSize="12dp"
+        android:backgroundTint="#888888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beginButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

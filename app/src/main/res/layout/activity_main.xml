@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnBeginWorkout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_marginTop="80dp"
+        android:text="Welcome to Your Workout Timer!"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:text="Enter your name:"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Name"
+        android:background="@drawable/input_border"
+        android:textColorHint="#6969E3"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/setsText"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle" />
+
+    <TextView
+        android:id="@+id/setsText"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="160dp"
+        android:text="Number of sets:"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle" />
+
+    <EditText
+        android:id="@+id/setsEditText"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="160dp"
+        android:ems="10"
+        android:hint="Number of sets"
+        android:background="@drawable/input_border"
+        android:textColorHint="#6969E3"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/setsText"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle" />
+
+    <TextView
+        android:id="@+id/workoutText"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:text="Workout Time (secs):"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setsText" />
+
+    <EditText
+        android:id="@+id/workoutEditText"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Workout Duration (secs)"
+        android:background="@drawable/input_border"
+        android:textColorHint="#6969E3"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/workoutText"
+        app:layout_constraintTop_toBottomOf="@+id/setsEditText" />
+
+    <TextView
+        android:id="@+id/restText"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:text="Rest Time (secs):"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workoutText" />
+
+    <EditText
+        android:id="@+id/restEditText"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Rest Duration (secs)"
+        android:background="@drawable/input_border"
+        android:textColorHint="#6969E3"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/workoutText"
+        app:layout_constraintTop_toBottomOf="@+id/workoutEditText" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:text="START"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restEditText"
+        android:onClick="OnStartClicked"/>
+
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="90dp"
+        android:text="Please enter the following information before you begin:"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textColor="#6969E3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="174dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
